@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@spotify/web-api-ts-sdk": "^1.1.2",
     "@vuepic/vue-datepicker": "^7.2.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.16",
+    "openai": "^4.15.1",
     "postcss": "^8.4.31",
     "primevue": "^3.39.0",
     "tailwindcss": "^3.3.5",
