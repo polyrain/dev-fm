@@ -156,21 +156,26 @@ async function generatePlaylist(startDate, langs) {
         }, new Set()
     );
     console.log(langGenres);
-    console.log(generateSeeds(langGenres));
     // We now have how many chunks of days to gen
     // Threshold the deadline by # of days left
     for (let i = diff; i >= 0; i--) {
+        // Cant find a decent way to deep clone so enjoy this
+        // horrible, horrible, horrible slow hack
+        let iterGenres = new Set();
+        langGenres.forEach(item => iterGenres.add(item))
+
         if (i > 5) {
             // Chill, we have time
-            deadlineGroups['far'].forEach(item => langGenres.add(item));
+            deadlineGroups['far'].forEach(item => iterGenres.add(item));
         } else if (i > 2) {
             // Times ramping up but we have a little bit
-            deadlineGroups['near'].forEach(item => langGenres.add(item));
+            deadlineGroups['near'].forEach(item => iterGenres.add(item));
         } else {
             // It's do or die
-            deadlineGroups['immediate'].forEach(item => langGenres.add(item));
+            deadlineGroups['immediate'].forEach(item => iterGenres.add(item));
         }
-        generateChunk(generateSeeds(langGenres), playlist)
+        console.log(iterGenres)
+        generateChunk(generateSeeds(iterGenres), playlist)
     }
 }
 
