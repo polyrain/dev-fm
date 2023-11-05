@@ -5,13 +5,12 @@ import LanguageForm from './components/LanguageForm.vue';
 import SpotifyButton from './components/SpotifyButton.vue';
 
 import { changeText, captureUserInput } from './js/input';
-// FUCK ME THIS DIDNT WORK AAAAAAAAAA 
-//import {setup, testGPT} from './js/gpt'
-
+import { initSpotify } from './js/spotify';
 
 //console.log(import.meta.env.VITE_OPENAI_API_KEY);
 const text = changeText();
 const inputs = captureUserInput();
+initSpotify(); // Provide the list of stuff 
 //await testSpotify();
 </script>
 

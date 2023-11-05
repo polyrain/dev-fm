@@ -11,6 +11,7 @@
   "dependencies": {
     "@spotify/web-api-ts-sdk": "^1.1.2",
     "@vuepic/vue-datepicker": "^7.2.0",
+    "date-fns": "^2.30.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {

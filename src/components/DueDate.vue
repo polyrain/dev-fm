@@ -1,16 +1,9 @@
-<template>
-    <Calendar v-model="date" showIcon/>
-  </template>
-  
-  <script>
+<script setup>
   import Calendar from 'primevue/calendar';
-  
-  export default {
-    components: { Calendar },
-    data() {
-      return {
-        date: null,
-      };
-    }
-  }
-  </script>
+  import { ref, inject } from 'vue';
+  const userInputsCtx = inject('USER_INPUT');
+</script>
+
+<template>
+  <Calendar v-model="userInputsCtx.input.date" showIcon/>
+</template>
