@@ -15,7 +15,8 @@ const genreGroups = {
     'enterprise': ['classical', 'ambient', 'acoustic', 'disney'],
     'high-level': ['electronic', 'deep-house', 'progressive-house', 'synth-pop', 'techno'],
     'functional': ['alternative', 'anime', 'chicago-house', 'deep-house', 'garage', 'jazz'],
-    'esolang': ['k-pop', 'j-pop', 'minimal-techno', 'new-age', 'post-dubstep']
+    'esolang': ['k-pop', 'j-pop', 'minimal-techno', 'new-age', 'post-dubstep'],
+    'gamedev': ['ambient', 'classical', 'electronic', 'soundtracks', 'jazz'],
 }
 
 // Genres that get sprinkled in based on how close to deadline we are
@@ -51,7 +52,21 @@ const langTags = {
     'F#': 'functional',
     'Elm': 'functional',
     'Erlang': 'functional',
-    'Brainfuck': 'esolang'
+    'Brainfuck': 'esolang',
+    'HAXE': 'gamedev',
+    'Perl': 'enterprise',
+    'R': 'functional',
+    'MATLAB': 'functional',
+    'Julia': 'high-level',
+    'OCamal': 'functional',
+    'APL': 'functional',
+    'Ada': 'low-level',
+    'Prolog': 'low-level',
+    'COBOL': 'low-level',
+    'Forth': 'low-level',
+    'GDScript': 'gamedev',
+    'GLSL': 'gamedev',
+    'GML': 'gamedev',
 }
 
 const languages = [
