@@ -117,7 +117,6 @@ function generateSeeds(genres) {
 }
 
 function generateChunk(seeds, playlist) {
-    console.log("Hello");
     api.recommendations.get({
         seed_genres: seeds,
         limit: 10,
